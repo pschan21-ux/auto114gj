@@ -1,0 +1,5 @@
+_price_backup_*/
+*.design_bak_*
+*.opts_bak
+*.bak
+Thumbs.db

@@ -245,8 +245,8 @@ document.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")mv(-1);if
 <div class="calc-row"><label>차량가격</label><div><input type="number" id="pcVal" value="730"> 만원</div></div>
 <button class="calc-apply" onclick="calcA()">적용</button>
 <div class="calc-row"><label>거주지</label><select id="reg" onchange="calcA()"><option>광주</option><option>전남</option><option>서울</option><option>경기</option><option>기타</option></select></div>
-<div class="calc-row"><label>취득세</label><div>승용 : 7.5% <span class="val" id="tax">-</span> 원</div></div>
-<div class="calc-row"><label>공채매입비</label><div><span class="val" id="bond">-</span> 원</div></div>
+<div class="calc-row"><label>취득세</label><div>경형 승합 : 면제 <span class="val" id="tax">-</span> 원</div></div>
+<div class="calc-row"><label>공채매입비</label><div>경형 : 면제 <span class="val" id="bond">-</span> 원</div></div>
 <div class="calc-row"><label>이전등록대행</label><div><input type="number" id="agency" value="77000" onchange="calcA()" style="width:80px"> 원</div></div>
 <div class="calc-row"><label>성능보험료</label><div><input type="number" id="ins" value="0" onchange="calcA()" style="width:80px"> 원</div></div>
 <div class="calc-total"><span class="lbl">총 구입비용</span><span><span class="num" id="totA">-</span> 원</span></div>
@@ -280,11 +280,12 @@ document.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")mv(-1);if
 <div class="modal-h"><h3>중고자동차 성능·상태점검기록부</h3><button class="modal-close" onclick="closeInsp()">×</button></div>
 <div class="modal-body" style="padding:14px;"><div style="margin-bottom:10px;text-align:right;"><a href="images/ray_194ma5925_cklist.pdf" download target="_blank" rel="noopener" style="padding:7px 14px;background:#0d1f3c;color:#fff;font-size:12px;font-weight:700;border-radius:5px;text-decoration:none;">📥 PDF 다운로드</a></div><img class="insp-img" src="images/ray_194ma5925_cklist_p1.png" alt="성능점검기록부 1/4" loading="lazy" style="margin-bottom:10px;"><img class="insp-img" src="images/ray_194ma5925_cklist_p2.png" alt="성능점검기록부 2/4" loading="lazy" style="margin-bottom:10px;"><img class="insp-img" src="images/ray_194ma5925_cklist_p3.png" alt="성능점검기록부 3/4" loading="lazy" style="margin-bottom:10px;"><img class="insp-img" src="images/ray_194ma5925_cklist_p4.png" alt="성능점검기록부 4/4" loading="lazy" style="margin-bottom:10px;"></div>
 </div></div>
-<script>window.__TAX_RATE__=0.075;</script>
+<script>window.__TAX_RATE__=0;window.__BOND_RATE__=0;/* 998cc 경형 승합 — 지방세특례제한법 제17조의2 취득세 면제, 공채매입 면제 */</script>
 
 <script>
 /* 계산기 - 취득세율은 페이지별로 inline 변수 사용 */
-var TAX_RATE = window.__TAX_RATE__ || 0.075;
+var TAX_RATE = (typeof window.__TAX_RATE__ === 'number') ? window.__TAX_RATE__ : 0.075;
+var BOND_RATE = (typeof window.__BOND_RATE__ === 'number') ? window.__BOND_RATE__ : 0.025;
 function openCalc(){{document.getElementById('calcModal').classList.add('on');calcA();calcB();}}
 function closeCalc(){{document.getElementById('calcModal').classList.remove('on');}}
 function openInsp(){{document.getElementById('inspModal').classList.add('on');}}
@@ -300,7 +301,7 @@ function calcA(){{
  var price=parseInt(document.getElementById('pcVal').value)||0;
  var priceWon=price*10000;
  var tax=Math.round(priceWon*TAX_RATE);
- var bond=Math.round(priceWon*0.025);  /* 공채매입비 약 2.5% (지역별 편차) */
+ var bond=Math.round(priceWon*BOND_RATE);  /* 공채매입비 (경형은 면제) */
  var agency=parseInt(document.getElementById('agency').value)||0;
  var ins=parseInt(document.getElementById('ins').value)||0;
  document.getElementById('tax').textContent=fmt(tax);

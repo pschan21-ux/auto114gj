@@ -58,6 +58,8 @@ header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,
 
 /* HERO */
 .hero{min-height:100dvh;background:var(--off);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding-top:104px;}
+.hphoto{position:absolute;inset:0;background:url("images/hero_office.jpg") center 34%/cover no-repeat;filter:contrast(1.04) saturate(1.05);opacity:.95;pointer-events:none;}
+.hveil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(246,246,243,.88) 0%,rgba(246,246,243,.70) 32%,rgba(246,246,243,.36) 60%,rgba(246,246,243,.16) 100%);pointer-events:none;}
 .hgrid{position:absolute;inset:0;background-image:linear-gradient(rgba(17,20,23,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(17,20,23,.045) 1px,transparent 1px);background-size:72px 72px;pointer-events:none;}
 .hglow{position:absolute;right:-12%;top:8%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(17,20,23,.05) 0%,transparent 65%);pointer-events:none;}
 .hin{max-width:1280px;margin:0 auto;width:100%;padding:60px 40px 56px;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;position:relative;z-index:1;}
@@ -288,6 +290,8 @@ footer{background:var(--navy);}
   .hbg{display:flex;}
   .logo-t .kr{font-size:14px;}
   .hero{padding-top:94px;}
+  .hphoto{background-position:center 28%;opacity:.85;}
+  .hveil{background:linear-gradient(180deg,rgba(246,246,243,.82) 0%,rgba(246,246,243,.60) 40%,rgba(246,246,243,.88) 100%);}
   .hin{grid-template-columns:1fr;gap:0;padding:32px 18px 0;}
   h1.htitle{font-size:38px;letter-spacing:-1.5px;}
   .hdesc{font-size:14px;}
@@ -558,6 +562,8 @@ textarea.apinp{min-height:90px;resize:vertical;}
 
 <!-- HERO -->
 <section class="hero">
+<div class="hphoto"></div>
+<div class="hveil"></div>
 <div class="hgrid"></div>
 <div class="hglow"></div>
 <div class="hin">

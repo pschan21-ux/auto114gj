@@ -3,3 +3,4 @@ _price_backup_*/
 *.opts_bak
 *.bak
 Thumbs.db
+*.hero_bak_*

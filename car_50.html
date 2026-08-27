@@ -197,13 +197,15 @@ body{font-family:"Noto Sans KR",sans-serif;background:#f5f5f5;}
     <div>
       <div class="sr"><div class="sl">차종</div><div class="sv">승용 (경형 SUV)</div></div>
       <div class="sr"><div class="sl">연식</div><div class="sv">2023년형 (최초등록: 2022.8)</div></div>
-      <div class="sr"><div class="sl">주행거리</div><div class="sv">107,981 km</div></div>
+      <div class="sr"><div class="sl">주행거리</div><div class="sv">107,982 km</div></div>
       <div class="sr"><div class="sl">연료</div><div class="sv">가솔린</div></div>
       <div class="sr"><div class="sl">배기량</div><div class="sv">998cc</div></div>
       <div class="sr"><div class="sl">변속기</div><div class="sv">자동</div></div>
       <div class="sr"><div class="sl">색상</div><div class="sv">흰색</div></div>
       <div class="sr"><div class="sl">차량번호</div><div class="sv">172다8655</div></div>
-      <div class="sr"><div class="sl">사고이력</div><div class="sv ok">무사고 (압류/저당 0건)</div></div>
+      <div class="sr"><div class="sl">사고이력</div><div class="sv ok">무사고 (단순수리 있음)</div></div>
+      <div class="sr"><div class="sl">용도이력</div><div class="sv">렌트 이력 있음</div></div>
+      <div class="sr"><div class="sl">보증유형</div><div class="sv">보험사보증 (KB손보)</div></div>
       <div class="sr"><div class="sl">보관장소</div><div class="sv">광주 서구 풍암자동차매매단지</div></div>
     </div>
   </div>
@@ -289,10 +291,19 @@ document.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")mv(-1);if
 
 <!-- 성능점검기록부 모달 -->
 <div class="modal-bg" id="inspModal">
-<div class="modal" style="max-width:900px;">
-<div class="modal-h"><h3>중고자동차 성능·상태점검기록부</h3><button class="modal-close" onclick="closeInsp()">×</button></div>
-<div class="modal-body" style="padding:14px;">
-  <div class="insp-empty">성능·상태점검기록부는 현재 준비 중입니다.<br>전화로 문의해 주시면 즉시 보내드리며, 차량 인도 전 반드시 교부해 드립니다.</div>
+<div class="modal" style="max-width:900px;height:92vh;">
+<div class="modal-h">
+  <h3>중고자동차 성능·상태점검기록부</h3>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="images/casper_172da8655_cklist.pdf" download target="_blank" rel="noopener" style="padding:7px 14px;background:#0d1f3c;color:#fff;font-size:12px;font-weight:700;border-radius:5px;text-decoration:none;">📥 PDF 다운로드</a>
+    <button class="modal-close" onclick="closeInsp()">×</button>
+  </div>
+</div>
+<div class="modal-body" style="padding:12px;background:#f5f5f5;">
+  <img src="images/casper_172da8655_cklist_p1.png" alt="중고자동차 성능·상태점검기록부 1페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/casper_172da8655_cklist_p2.png" alt="중고자동차 성능·상태점검기록부 2페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/casper_172da8655_cklist_p3.png" alt="중고자동차 성능·상태점검기록부 3페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/casper_172da8655_cklist_p4.png" alt="중고자동차 성능·상태점검기록부 4페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;">
 </div>
 </div></div>
 <script>window.__TAX_RATE__=0;window.__BOND_RATE__=0;/* 998cc 경형 승용 — 지방세특례제한법 제17조의2 취득세 면제, 공채매입 면제 */</script>

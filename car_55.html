@@ -114,6 +114,7 @@ body{font-family:"Noto Sans KR",sans-serif;background:#f5f5f5;}
 <div class="wrap">
   <div class="card">
     <div class="badge-row">
+      <span class="badge b-green">무사고</span>
       <span class="badge b-gray">No.55</span>
       <span class="badge b-gray">가솔린</span>
       <span class="badge b-gray">SUV</span>
@@ -129,6 +130,7 @@ body{font-family:"Noto Sans KR",sans-serif;background:#f5f5f5;}
     </div>
 <div class="car-actions">
 <button type="button" class="ac-btn primary" onclick="openCalc()"><span class="ic">💰</span>총 구매비용 계산</button>
+<button type="button" class="ac-btn" onclick="openInsp()"><span class="ic">📋</span>성능점검상태기록부</button>
 <a class="ac-btn" href="https://www.carhistory.or.kr" target="_blank" rel="noopener"><span class="ic">🚨</span>사고이력정보</a>
 </div>
   </div>
@@ -202,6 +204,9 @@ body{font-family:"Noto Sans KR",sans-serif;background:#f5f5f5;}
       <div class="sr"><div class="sl">색상</div><div class="sv">흰색</div></div>
       <div class="sr"><div class="sl">차량번호</div><div class="sv">333주2281</div></div>
       <div class="sr"><div class="sl">구동방식</div><div class="sv">2WD 전륜구동</div></div>
+      <div class="sr"><div class="sl">사고이력</div><div class="sv ok">무사고 (단순수리 없음)</div></div>
+      <div class="sr"><div class="sl">검사유효기간</div><div class="sv">2026.03.31 ~ 2027.03.30</div></div>
+      <div class="sr"><div class="sl">보증유형</div><div class="sv">보험사보증 (KB손보)</div></div>
       <div class="sr"><div class="sl">보관장소</div><div class="sv">광주 서구 풍암자동차매매단지</div></div>
     </div>
   </div>
@@ -284,6 +289,24 @@ document.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")mv(-1);if
 <li>대출시 이용 또는 할부차량의 경우 대략적인 금액을 확인 하실 수 있습니다.</li>
 <li>위 자료는 참고 자료이며, 정확한 금액은 금융기관으로 문의하세요.</li>
 </ul>
+</div>
+</div></div>
+
+<!-- 성능점검기록부 모달 -->
+<div class="modal-bg" id="inspModal">
+<div class="modal" style="max-width:900px;height:92vh;">
+<div class="modal-h">
+  <h3>중고자동차 성능·상태점검기록부</h3>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="images/kona_333ju2281_cklist.pdf" download target="_blank" rel="noopener" style="padding:7px 14px;background:#0d1f3c;color:#fff;font-size:12px;font-weight:700;border-radius:5px;text-decoration:none;">📥 PDF 다운로드</a>
+    <button class="modal-close" onclick="closeInsp()">×</button>
+  </div>
+</div>
+<div class="modal-body" style="padding:12px;background:#f5f5f5;">
+  <img src="images/kona_333ju2281_cklist_p1.png" alt="중고자동차 성능·상태점검기록부 1페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/kona_333ju2281_cklist_p2.png" alt="중고자동차 성능·상태점검기록부 2페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/kona_333ju2281_cklist_p3.png" alt="중고자동차 성능·상태점검기록부 3페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/kona_333ju2281_cklist_p4.png" alt="중고자동차 성능·상태점검기록부 4페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;">
 </div>
 </div></div>
 

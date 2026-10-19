@@ -267,9 +267,20 @@ document.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")mv(-1);if
 
 <!-- 성능점검기록부 모달 -->
 <div class="modal-bg" id="inspModal">
-<div class="modal" style="max-width:900px;">
-<div class="modal-h"><h3>중고자동차 성능·상태점검기록부</h3><button class="modal-close" onclick="closeInsp()">×</button></div>
-<div class="modal-body" style="padding:14px;"><img class="insp-img" src="images/img_98f91479f782.jpg" alt="성능점검기록부 1/4" loading="lazy" style="margin-bottom:10px;"><img class="insp-img" src="images/img_61fc8aec15c8.jpg" alt="성능점검기록부 2/4" loading="lazy" style="margin-bottom:10px;"><img class="insp-img" src="images/img_941f537717b2.jpg" alt="성능점검기록부 3/4" loading="lazy" style="margin-bottom:10px;"><img class="insp-img" src="images/img_8ff64a37fff2.jpg" alt="성능점검기록부 4/4" loading="lazy" style="margin-bottom:10px;"></div>
+<div class="modal" style="max-width:900px;height:92vh;">
+<div class="modal-h">
+  <h3>중고자동차 성능·상태점검기록부</h3>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="images/bongo_82na9509_cklist.pdf" download target="_blank" rel="noopener" style="padding:7px 14px;background:#0d1f3c;color:#fff;font-size:12px;font-weight:700;border-radius:5px;text-decoration:none;">📥 PDF 다운로드</a>
+    <button class="modal-close" onclick="closeInsp()">×</button>
+  </div>
+</div>
+<div class="modal-body" style="padding:12px;background:#f5f5f5;">
+  <img src="images/bongo_82na9509_cklist_p1.png" alt="중고자동차 성능·상태점검기록부 1페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/bongo_82na9509_cklist_p2.png" alt="중고자동차 성능·상태점검기록부 2페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/bongo_82na9509_cklist_p3.png" alt="중고자동차 성능·상태점검기록부 3페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;margin-bottom:10px;">
+  <img src="images/bongo_82na9509_cklist_p4.png" alt="중고자동차 성능·상태점검기록부 4페이지" style="width:100%;height:auto;display:block;border:1px solid #ddd;border-radius:4px;background:#fff;">
+</div>
 </div></div>
 <script>window.__TAX_RATE__=0.055;</script>
 

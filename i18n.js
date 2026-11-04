@@ -162,6 +162,8 @@
     '주요 옵션': ['Key Options', 'Основные опции', '主要配置', 'Trang bị chính', 'التجهيزات الرئيسية'],
     '특이사항': ['Notes', 'Примечания', '特别事项', 'Ghi chú', 'ملاحظات'],
     '해당차량 출고 시 장착한 선택옵션': ['Factory-installed optional equipment', 'Заводские опции автомобиля', '出厂时选装的配置', 'Tùy chọn lắp từ nhà máy', 'تجهيزات اختيارية من المصنع'],
+    '인포테인먼트 내비 II': ['Infotainment Navi II package', 'Пакет Infotainment Navi II', '信息娱乐导航 II 套装', 'Gói Infotainment Navi II', 'حزمة Infotainment Navi II'],
+    '하이패스 + ECM 룸미러': ['Hi-Pass + ECM mirror', 'Hi-Pass и зеркало ECM', 'Hi-Pass + ECM防眩目后视镜', 'Hi-Pass + gương ECM', 'Hi-Pass + مرآة ECM'],
     '커튼 에어백': ['Curtain airbags', 'Шторки безопасности', '侧气帘', 'Túi khí rèm', 'وسائد هوائية ستارية'],
     '4단 자동변속기 & 후드인슐레이션': ['4-speed automatic & hood insulation', '4-ступенчатый автомат и шумоизоляция капота', '4速自动变速器及发动机盖隔音', 'Hộp số tự động 4 cấp & cách âm nắp capo', 'ناقل أوتوماتيكي 4 سرعات وعزل غطاء المحرك'],
     '성능점검기록부 제공 가능': ['Inspection report available', 'Акт осмотра предоставляется', '可提供性能检测记录', 'Có biên bản kiểm định', 'تقرير الفحص متاح'],

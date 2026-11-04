@@ -563,6 +563,8 @@
     [/^차량번호:?\s*(.+)$/, function (m, l) { return ({ en: 'Plate No.: ', ru: 'Гос. номер: ', zh: '车牌号：', vi: 'Biển số: ', ar: 'رقم اللوحة: ' })[l] + m[1]; }],
     // 가격 N만원 → 실제 KRW
     [/^([\d,\.]+)\s*만원$/, function (m, l) { var n = parseFloat(m[1].replace(/,/g, '')) * 10000; return fmtNum(n, l) + KRW[l]; }],
+    // 직접매입으로 검증된 매물 · 총 N대 보유 (대수는 자동 집계되므로 패턴으로 처리)
+    [/^직접매입으로 검증된 매물 · 총 (\d+)대 보유$/, function (m, l) { return ({ en: 'Directly purchased, verified stock', ru: 'Проверенные авто прямой закупки', zh: '直接收购·经过验证的车辆', vi: 'Xe thu mua trực tiếp, đã kiểm định', ar: 'مركبات مشتراة مباشرة ومفحوصة' })[l]; }],
     // 전체 (N)
     [/^전체 \((\d+)\)$/, function (m, l) { return ({ en: 'All (', ru: 'Все (', zh: '全部 (', vi: 'Tất cả (', ar: 'الكل (' })[l] + m[1] + ')'; }],
     // 주요 옵션 (N개)

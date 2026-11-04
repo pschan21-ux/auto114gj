@@ -608,7 +608,7 @@ textarea.apinp{min-height:90px;resize:vertical;}
   <div class="shdr"><div class="ey">WHY AUTO 114</div><div class="stitle">18년의 신뢰</div><div class="sdesc">2008년 창업 이래 광주·전남 최고의 중고차 전문기업으로 성장해왔습니다</div></div>
   <div class="sgrid">
     <div class="scard"><div class="snum">18<sup>년</sup></div><div class="slbl">창업 이래 업력</div></div>
-    <div class="scard"><div class="snum">42<sup>대</sup></div><div class="slbl">현재 보유 차량</div></div>
+    <div class="scard"><div class="snum">43<sup>대</sup></div><div class="slbl">현재 보유 차량</div></div>
     <div class="scard"><div class="snum">98<sup>%</sup></div><div class="slbl">고객 만족도</div></div>
     <div class="scard"><div class="snum">당일</div><div class="slbl">매입 · 입금 처리</div></div>
   </div>
@@ -678,7 +678,7 @@ textarea.apinp{min-height:90px;resize:vertical;}
     <div><div class="ey">VEHICLE INVENTORY</div><div class="stitle">보유 차량 전체 목록</div><div class="sdesc">직접매입으로 검증된 매물 · 총 43대 보유</div></div>
   </div>
   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
-    <button class="fbtn on" onclick="fc(this,'all')">전체 (39)</button>
+    <button class="fbtn on" onclick="fc(this,'all')">전체 (43)</button>
     <button class="fbtn" onclick="fc(this,'SUV')">SUV</button>
     <button class="fbtn" onclick="fc(this,'승용')">승용</button>
     <button class="fbtn" onclick="fc(this,'승합')">승합</button>
@@ -688,7 +688,7 @@ textarea.apinp{min-height:90px;resize:vertical;}
     <button class="fbtn" onclick="fc(this,'하이브리드')">하이브리드</button>
     <button class="fbtn" onclick="fc(this,'LPG')">LPG</button>
   </div>
-  <div id="ccount" style="font-size:13px;color:#888;margin-bottom:16px;"><strong style="color:#111417;font-size:15px;">42</strong>대의 차량이 있습니다</div>
+  <div id="ccount" style="font-size:13px;color:#888;margin-bottom:16px;"><strong style="color:#111417;font-size:15px;">43</strong>대의 차량이 있습니다</div>
   <div class="cgrid" id="cgrid">
 <div class="ccard" data-type="화물" data-fuel="디젤">
 <div class="cthumb" style="padding:0;overflow:hidden;"><img src="images/hq_car01.jpg" style="width:100%;height:100%;object-fit:cover;" loading="lazy" alt="차량"></div>
@@ -1779,6 +1779,27 @@ function showNotice(idx){
 })();
 </script>
 
+<script>
+/* 보유 대수 자동 집계 — 차량 카드(.ccard) 개수를 세어 화면의 숫자들을 맞춘다.
+   차량을 추가·삭제해도 아래 4곳을 따로 고칠 필요가 없다.
+   i18n.js(defer)보다 먼저 실행되므로 번역에도 그대로 반영된다. */
+(function () {
+  var n = document.querySelectorAll('.ccard').length;
+  if (!n) return;
+  document.querySelectorAll('.scard').forEach(function (c) {
+    var lbl = c.querySelector('.slbl'), num = c.querySelector('.snum');
+    if (lbl && num && lbl.textContent.indexOf('보유 차량') >= 0) num.innerHTML = n + '<sup>대</sup>';
+  });
+  document.querySelectorAll('.sdesc').forEach(function (d) {
+    if (d.textContent.indexOf('총 ') >= 0 && d.textContent.indexOf('대 보유') >= 0)
+      d.textContent = d.textContent.replace(/총\s*\d+대\s*보유/, '총 ' + n + '대 보유');
+  });
+  var all = document.querySelector('.fbtn');
+  if (all && /^전체\s*\(\d+\)$/.test(all.textContent.trim())) all.textContent = '전체 (' + n + ')';
+  var cc = document.getElementById('ccount');
+  if (cc) cc.innerHTML = '<strong style="color:#111417;font-size:15px;">' + n + '</strong>대의 차량이 있습니다';
+})();
+</script>
 <script src="i18n.js" defer></script>
 <script src="yt.js" defer></script>
 </body>

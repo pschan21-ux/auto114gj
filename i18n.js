@@ -171,6 +171,8 @@
     '주요 옵션': ['Key Options', 'Основные опции', '主要配置', 'Trang bị chính', 'التجهيزات الرئيسية'],
     '특이사항': ['Notes', 'Примечания', '特别事项', 'Ghi chú', 'ملاحظات'],
     '해당차량 출고 시 장착한 선택옵션': ['Factory-installed optional equipment', 'Заводские опции автомобиля', '出厂时选装的配置', 'Tùy chọn lắp từ nhà máy', 'تجهيزات اختيارية من المصنع'],
+    '버튼시동': ['Push-button start', 'Кнопка запуска', '一键启动', 'Khởi động nút bấm', 'تشغيل بزر'],
+    '애프터마켓 내비게이션': ['Aftermarket navigation', 'Навигация (неоригинальная)', '副厂导航', 'Dẫn đường lắp thêm', 'ملاحة ما بعد البيع'],
     '인포테인먼트 내비 II': ['Infotainment Navi II package', 'Пакет Infotainment Navi II', '信息娱乐导航 II 套装', 'Gói Infotainment Navi II', 'حزمة Infotainment Navi II'],
     '하이패스 + ECM 룸미러': ['Hi-Pass + ECM mirror', 'Hi-Pass и зеркало ECM', 'Hi-Pass + ECM防眩目后视镜', 'Hi-Pass + gương ECM', 'Hi-Pass + مرآة ECM'],
     '커튼 에어백': ['Curtain airbags', 'Шторки безопасности', '侧气帘', 'Túi khí rèm', 'وسائد هوائية ستارية'],
